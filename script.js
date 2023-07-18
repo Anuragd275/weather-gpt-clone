@@ -3,7 +3,7 @@ function getCurrentTemperature() {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
 
-      const apiEndpoint = `http://api.weatherapi.com/v1/current.json?key=26e1733cea604488a77134653231301&q=${latitude},${longitude}&aqi=no`;
+      const apiEndpoint = `https://api.weatherapi.com/v1/current.json?key=26e1733cea604488a77134653231301&q=${latitude},${longitude}&aqi=no`;
 
       fetch(apiEndpoint)
         .then((response) => response.json())
