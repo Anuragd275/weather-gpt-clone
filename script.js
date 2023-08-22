@@ -1,3 +1,21 @@
+'use strict'
+
+// Toggling dark theme and light theme
+
+const btn = document.getElementById("the")
+
+btn.addEventListener("click", function(){
+    document.body.classList.toggle("light-theme");
+    document.body.classList.toggle("dark-theme");
+
+    const className = document.body.className;
+    if(className == "light-theme") {
+        this.innerHTML = `<i class="fa-solid fa-moon" id="themeIcon"></i>`;
+    } else {
+        this.innerHTML = `<i class="fa-solid fa-sun" id="themeIcon"></i>`;
+    }
+})
+
 function getCurrentTemperature() {
     navigator.geolocation.getCurrentPosition((position) => {
       const latitude = position.coords.latitude;
