@@ -52,5 +52,7 @@ p, a{
 }
 
 @media (max-width: 600px){
-    
+    .box{
+        padding: 0 2rem;
+    }
 }
