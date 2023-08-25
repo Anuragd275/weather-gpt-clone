@@ -26,14 +26,14 @@ function getCurrentTemperature() {
       fetch(apiEndpoint)
         .then((response) => response.json())
         .then((data) => {
-            const currentTemperature = data.current.temp_c;
             const location = data.location.name;
+            const { temp_c, humidity, condition, wind_kph} = data.current;
 
           // Update the temperature in the HTML element with id 'temperature'
-          document.getElementById(
-            "temperature"
-            ).textContent = `${currentTemperature}°C`;
-            document.getElementById('location').textContent = `${location}`;
+          document.getElementById("temperature").textContent = `${temp_c}°C`;
+          document.getElementById('location').textContent = `${location}`;
+          document.getElementById('condition').textContent = condition.text;
+          document.getElementById('humidity').textContent = `${humidity}%`;
         })
         .catch((error) => {
           console.log("Error:", error);
