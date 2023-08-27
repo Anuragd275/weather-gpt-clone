@@ -30,6 +30,14 @@ body{
     height: 1%;
     color: var(--background-color);
 }
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -50,6 +58,10 @@ p, a{
 
 #text{
     font-size: 2.5rem;
+}
+
+.deploy-button{
+    margin-top: 450%;
 }
 
 @media (max-width: 600px){
